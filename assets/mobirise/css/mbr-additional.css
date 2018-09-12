@@ -1460,7 +1460,8 @@ body {
   }
 }
 .cid-r3oA4r7r19 {
-  background-image: url("../../../assets/images/mbr-3-1920x1280.jpg");
+  background-color: #0f7699;
+  background: linear-gradient(45deg, #0f7699, #073b4c);
 }
 @media (min-width: 992px) {
   .cid-r3oA4r7r19 .mbr-figure {
@@ -1478,8 +1479,8 @@ body {
   }
 }
 .cid-r3oBi3zCAt {
-  background-color: #82786e;
-  background: linear-gradient(45deg, #82786e, #b2ccd2);
+  background-color: #4f4943;
+  background: linear-gradient(45deg, #4f4943, #b2ccd2);
 }
 .cid-r3oBi3zCAt .media-container-row {
   flex-direction: row-reverse;

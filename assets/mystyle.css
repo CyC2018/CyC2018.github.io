@@ -9,7 +9,7 @@ img[src="assets/images/logomakr-0zpezn-563x600.png"] {
 /* DEMO-SPECIFIC STYLES */
 p.mbr-text.align-center.display-5.pb-3.mbr-fonts-style {
   color: #fff;
-  font-family: monospace;
+  font-family: ;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: .15em solid orange; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
