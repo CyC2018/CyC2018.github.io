@@ -19,13 +19,13 @@ p.mbr-text.align-center.display-5.pb-3.mbr-fonts-style {
     typing 4s steps(30, end),
     blink-caret .5s step-end infinite,
     show 1s;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 
 /* The typing effect */
 @keyframes typing {
   from { width: 0; display: block;}
-  to { width: 100% }
+  to { width: 100%;display: block; }
 }
 
 /* The typewriter cursor effect */
