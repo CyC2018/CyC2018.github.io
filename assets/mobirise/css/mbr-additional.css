@@ -1373,15 +1373,15 @@ body {
   display: none;
 }
 .cid-r3mcMCaeWf {
-  background: linear-gradient(45deg, #6576aa, #465052);
+  background-image: url("../../../assets/images/03.jpg");
 }
 .cid-r3mcMCaeWf .mbr-text,
 .cid-r3mcMCaeWf .mbr-section-btn {
   text-align: left;
 }
 .cid-r3otdsLP1U {
-  background-color: #5b686b;
-  background: linear-gradient(45deg, #5b686b, #c1c1c1);
+  background-color: #05090b;
+  background: linear-gradient(45deg, #05090b, #c1c1c1);
 }
 .cid-r3otdsLP1U .media-container-row {
   flex-direction: row-reverse;
@@ -1417,8 +1417,8 @@ body {
   text-align: left;
 }
 .cid-r3oxDq1Ohn {
-  background-color: #073b4c;
-  background: linear-gradient(45deg, #073b4c, #5b686b);
+  background-color: #c1c1c1;
+  background: linear-gradient(45deg, #c1c1c1, #073b4c);
 }
 @media (min-width: 992px) {
   .cid-r3oxDq1Ohn .mbr-figure {
@@ -1436,8 +1436,8 @@ body {
   }
 }
 .cid-r3ozbOCA7G {
-  background-color: #232323;
-  background: linear-gradient(45deg, #232323, #767676);
+  background-color: #cebfaf;
+  background: linear-gradient(45deg, #cebfaf, #767676);
 }
 .cid-r3ozbOCA7G .media-container-row {
   flex-direction: row-reverse;
@@ -1460,7 +1460,7 @@ body {
   }
 }
 .cid-r3oA4r7r19 {
-  background-image: url("../../../assets/images/mbr-1920x1280.jpg");
+  background-image: url("../../../assets/images/mbr-3-1920x1280.jpg");
 }
 @media (min-width: 992px) {
   .cid-r3oA4r7r19 .mbr-figure {
@@ -1521,8 +1521,8 @@ body {
   }
 }
 .cid-r3oHlTWEui {
-  padding-top: 90px;
-  padding-bottom: 90px;
+  padding-top: 45px;
+  padding-bottom: 45px;
   background-color: #fafafa;
 }
 .cid-r3oHlTWEui h3 {
@@ -1555,8 +1555,8 @@ body {
   }
 }
 .cid-r3oHUdpUmZ {
-  padding-top: 90px;
-  padding-bottom: 90px;
+  padding-top: 45px;
+  padding-bottom: 45px;
   background-color: #efefef;
 }
 .cid-r3oHUdpUmZ h3 {
@@ -1589,8 +1589,8 @@ body {
   }
 }
 .cid-r3oI2Q8ScX {
-  padding-top: 90px;
-  padding-bottom: 90px;
+  padding-top: 45px;
+  padding-bottom: 45px;
   background-color: #fafafa;
 }
 .cid-r3oI2Q8ScX h3 {
@@ -1623,8 +1623,8 @@ body {
   }
 }
 .cid-r3oIeKK9By {
-  padding-top: 90px;
-  padding-bottom: 90px;
+  padding-top: 45px;
+  padding-bottom: 45px;
   background-color: #efefef;
 }
 .cid-r3oIeKK9By h3 {
@@ -1657,8 +1657,8 @@ body {
   }
 }
 .cid-r3oIsJoYBx {
-  padding-top: 90px;
-  padding-bottom: 90px;
+  padding-top: 45px;
+  padding-bottom: 45px;
   background-color: #fafafa;
 }
 .cid-r3oIsJoYBx h3 {
