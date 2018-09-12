@@ -16,7 +16,7 @@ p.mbr-text.align-center.display-5.pb-3.mbr-fonts-style {
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: .15em; /* Adjust as needed */
   animation: 
-    typing 6s steps(30, end),
+    typing 4s steps(30, end),
     blink-caret .5s step-end infinite;
 }
 
