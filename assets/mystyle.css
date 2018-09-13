@@ -33,3 +33,7 @@ p.mbr-text.align-center.display-5.pb-3.mbr-fonts-style {
   from, to { border-color: transparent }
   50% { border-color: orange }
 }
+
+.preload {
+  display: none;
+}
