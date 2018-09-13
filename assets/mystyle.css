@@ -7,7 +7,7 @@ img[src="assets/images/logomakr-0zpezn-563x600.png"] {
 }
 
 /* DEMO-SPECIFIC STYLES */
-p.mbr-text.align-center.display-5.pb-3.mbr-fonts-style {
+.typing {
   color: #fff;
   font-family: ;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
@@ -19,7 +19,7 @@ p.mbr-text.align-center.display-5.pb-3.mbr-fonts-style {
     typing 4s steps(30, end),
     blink-caret .5s step-end infinite,
     show 1s;
-  animation-delay: 1s;
+  /*animation-delay: 1s;*/
 }
 
 /* The typing effect */
@@ -36,4 +36,13 @@ p.mbr-text.align-center.display-5.pb-3.mbr-fonts-style {
 
 .preload {
   display: none;
+}
+
+.img-center {
+  display: block;
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
 }

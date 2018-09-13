@@ -6,16 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="generator" content="Mobirise v4.8.2, mobirise.com">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-
-    <!--     <link rel="preload" href="assets/images/03.jpg" as="image">
-    <link rel="preload" href="assets/images/1-2.gif" as="image"> -->
-    <!-- Site made with Mobirise Website Builder v4.8.2, https://mobirise.com -->
-
     <link rel="shortcut icon" href="assets/images/logomakr-3sxxzw-128x128.png" type="image/x-icon">
     <meta name="description" content="">
     <title>个人简历</title>
-
-        <link rel="stylesheet" href="assets/mystyle.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="assets/mystyle.css">
     <script src="assets/web/assets/jquery/jquery.min.js"></script>
 
     <script type="text/javascript">
@@ -25,27 +21,47 @@
         function pageIsLoaded() {
             console.log(document.readyState);
             if (document.readyState == "complete") {
-                window.location.href="page.html";
+                // window.location.href = "page.html";
             }
         }
-
     })(jQuery);
     </script>
 
+    <style type="text/css">
+    @media (max-height: 1000px) {
+        .content {
+            padding-top: 200px;
+        }
+    }
+
+    @media (max-height: 500px) {
+        .content {
+            padding-top: 100px;
+        }
+    }
+    </style>
 </head>
+
 <body>
-<img class="preload" src="assets/images/1-2.gif" style="display: none">
-<img class="preload" src="assets/images/10.gif" style="display: none">
-<img class="preload" src="assets/images/8-1.gif" style="display: none">
-<img class="preload" src="assets/images/11.gif" style="display: none">
-<img class="preload" src="assets/images/mbr-1920x1280.jpg" style="display: none">
-<img class="preload" src="assets/images/1-1014x325.png" style="display: none">
-<img class="preload" src="assets/images/03.jpg" style="display: none">
-<img class="preload" src="assets/images/11.gif" style="display: none">
-<img class="preload" src="assets/images/1-348x112.png" style="display: none">
-
-
-
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4 content">
+            <img src="assets/simple-pre-loader/images/loader-128x/Preloader_2.gif" class="img-center">
+            <p class="text-center" style="font-size: 28px; color: black">Loading...</p>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+    <div class="preload">
+        <img src="assets/images/1-2.gif" style="display: none">
+        <img src="assets/images/10.gif" style="display: none">
+        <img src="assets/images/8-1.gif" style="display: none">
+        <img src="assets/images/11.gif" style="display: none">
+        <img src="assets/images/mbr-1920x1280.jpg" style="display: none">
+        <img src="assets/images/1-1014x325.png" style="display: none">
+        <img src="assets/images/03.jpg" style="display: none">
+        <img src="assets/images/11.gif" style="display: none">
+        <img src="assets/images/1-348x112.png" style="display: none">
+    </div>
 </body>
 
 </html>
