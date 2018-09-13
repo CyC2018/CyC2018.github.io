@@ -5,16 +5,15 @@
     <link rel="stylesheet" href="assets/mystyle.css">
     <script src="assets/web/assets/jquery/jquery.min.js"></script>
     <script src="assets/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/myscript.js"></script>
     <script type="text/javascript">
     (function($) {
-$('#container').imagesLoaded().done( function( instance ) {
-  console.log('DONE  - all images have been successfully loaded');
-});
+$('.mbr-figure').imagesLoaded(function(){
+ console.log("I loaded!");
+})
     })(jQuery);
     </script>
-    <link rel="preload" href="assets/images/03.jpg" as="image">
-    <link rel="preload" href="assets/images/1-2.gif" as="image">
+<!--     <link rel="preload" href="assets/images/03.jpg" as="image">
+    <link rel="preload" href="assets/images/1-2.gif" as="image"> -->
     <!-- Site made with Mobirise Website Builder v4.8.2, https://mobirise.com -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
