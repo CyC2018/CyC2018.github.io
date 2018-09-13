@@ -19,7 +19,7 @@ img[src="assets/images/logomakr-0zpezn-563x600.png"] {
     typing 4s steps(30, end),
     blink-caret .5s step-end infinite,
     show 1s;
-  /*animation-delay: 1s;*/
+  animation-delay: 0.5s;
 }
 
 /* The typing effect */
