@@ -16,10 +16,9 @@
     <script type="text/javascript">
     (function($) {
         setInterval(pageIsLoaded, 500);
-
+        var cnt = 0;
         function pageIsLoaded() {
-            console.log(document.readyState);
-            if (document.readyState == "complete") {
+            if (cnt++ == 100 || document.readyState == "complete") {
                 window.location.href = "page.html";
             }
         }
