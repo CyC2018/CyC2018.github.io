@@ -78,12 +78,16 @@
             sum += sizes[i]
         }
         var curSize = 0;
+
         for (var i = 0; i < imgs.length; i++) {
             var img = new Image();
             img.src = imgs[i];
-            img.onload = function(x) {
-                console.log(img.complete);
-                curSize += sizes[x];
+            setInterval(check, 500, i, img);
+        }
+
+        function check(i, img) {
+            if (img.complete) {
+                curSize += sizes[i];
                 console.log(curSize);
                 var processState = $("#process-show");
                 processState.html(curSize + " / 7269 (Kb)");
@@ -91,8 +95,9 @@
                 if (curSize == sum) {
                     window.location.href = "page.html";
                 }
-            }(i);
+            }
         }
+
     })(jQuery);
     </script>
 </body>
