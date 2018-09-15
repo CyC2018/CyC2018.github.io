@@ -18,7 +18,6 @@
     <link rel="stylesheet" href="assets/socicon/css/styles.css">
     <link rel="stylesheet" href="assets/theme/css/style.css">
     <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
-    
     <link rel="stylesheet" href="assets/mystyle.css">
     <script src="assets/web/assets/jquery/jquery.min.js"></script>
 </head>
@@ -214,7 +213,7 @@
                 </div>
             </div>
         </div>
-        <div class="mbr-arrow hidden-sm-down" aria-hidden="true">
+        <div class="mbr-arrow hidden-sm-down" aria-hidden="true" id="next-skill">
             <a href="#next">
             <i class="mbri-down mbr-iconfont"></i>
         </a>
@@ -398,8 +397,16 @@
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/smoothscroll/smooth-scroll.js"></script>
     <script src="assets/parallax/jarallax.min.js"></script>
-    <script src="assets/as-pie-progress/jquery-as-pie-progress.min.js"></script>
     <script src="assets/theme/js/script.js"></script>
+    <script src="assets/as-pie-progress/jquery-as-pie-progress.min.js"></script>
+    <script>
+    jQuery(function($) {
+        $('#next-skill').on('click', function() {
+            $('.pie_progress').asPieProgress('reset');
+            setTimeout(function() { $('.pie_progress').asPieProgress('start'); }, 1000);
+        });
+    });
+    </script>
 </body>
 
 </html>
