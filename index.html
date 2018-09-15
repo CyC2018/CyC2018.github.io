@@ -87,14 +87,14 @@
         }
 
         function check(i, img) {
-            if (img.complete && check[i] == 0) {
+            if (img.complete) {
                 check[i] = 1;
                 curSize += sizes[i];
                 console.log(curSize);
                 var processState = $("#process-show");
                 processState.html(curSize + " / 7269 (Kb)");
                 console.log();
-                if (curSize == sum) {
+                if (curSize >= sum) {
                     window.location.href = "page.html";
                 }
             }
