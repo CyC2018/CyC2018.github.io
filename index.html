@@ -73,7 +73,7 @@
             "assets/images/1-3.gif" //501k
         ];
         var sizes = [43, 155, 126, 18, 4245, 1378, 582, 221, 501];
-        var check = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+        var isComplted = [0, 0, 0, 0, 0, 0, 0, 0, 0];
         var sum = 0;
         for (var i = 0; i < sizes.length; i++) {
             sum += sizes[i]
@@ -87,9 +87,8 @@
         }
 
         function check(i, img) {
-            if (img.complete) {
-                console.log(check[i]);
-                check[i] = 1;
+            if (img.complete && isComplted[i] == 0) {
+                isComplted[i] = 1;
                 curSize += sizes[i];
                 console.log(curSize);
                 var processState = $("#process-show");
