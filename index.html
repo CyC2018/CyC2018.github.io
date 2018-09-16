@@ -102,7 +102,7 @@
                 var processState = $("#process-show");
                 var s = curSize + "";
                 while(s.length != 4) s = " " + s;
-                processState.html(s + " / " + sum + "(Kb)");
+                processState.text(s + " / " + sum + "(Kb)");
                 console.log();
                 if (curSize >= sum) {
                     window.location.href = "page.html";
