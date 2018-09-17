@@ -94,6 +94,8 @@
             setInterval(check, 100, i, img);
         }
 
+        var cnt = 0;
+
         function check(i, img) {
             if (img.complete && isComplted[i] == 0) {
                 isComplted[i] = 1;
@@ -104,7 +106,7 @@
                 while(s.length != 4) s = " " + s;
                 processState.html(s + " / " + sum + "(Kb) <br>");
                 console.log();
-                if (curSize >= sum) {
+                if (curSize >= sum || cnt > 5000) {
                     window.location.href = "page.html";
                 }
             } else {
