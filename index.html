@@ -97,6 +97,7 @@
         var cnt = 0;
 
         function check(i, img) {
+            cnt++;
             if (img.complete && isComplted[i] == 0) {
                 isComplted[i] = 1;
                 curSize += sizes[i];
@@ -105,7 +106,6 @@
                 var s = curSize + "";
                 while(s.length != 4) s = " " + s;
                 processState.html(s + " / " + sum + "(Kb) <br>");
-                cnt++;
                 console.log(cnt);
                 if (curSize >= sum || cnt > 5000) {
                     window.location.href = "page.html";
