@@ -107,7 +107,7 @@
                 while(s.length != 4) s = " " + s;
                 processState.html(s + " / " + sum + "(Kb) <br>");
                 console.log(cnt);
-                if (curSize >= sum || cnt > 5000) {
+                if (curSize >= sum - 200 || cnt > 5000) {
                     window.location.href = "page.html";
                 }
             } else {
