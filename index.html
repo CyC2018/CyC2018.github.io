@@ -98,7 +98,8 @@
         }
 
         var cnt = 0;
-        var cnt_threshold = wait_time / (timeout * n);
+        var cnt_threshold = wait_time * n / timeout;
+        console.log(cnt_threshold);
 
         function check(i, img) {
             cnt++;
@@ -116,7 +117,8 @@
             var s = curSize + "";
             while (s.length != 5) s = " " + s;
             processState.html(s + " / " + sum + "(Kb) <br>");
-            console.log(cnt);
+            console.log(sum);
+            console.log(curSize);
             if (curSize >= sum - 200 || cnt > cnt_threshold) {
                 window.location.href = "page.html";
             }
