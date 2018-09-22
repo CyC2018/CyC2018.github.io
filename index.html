@@ -98,22 +98,22 @@
 
         function check(i, img) {
             cnt++;
+            console.log(cnt);
             if (img.complete && isComplted[i] == 0) {
                 isComplted[i] = 1;
                 curSize += sizes[i];
-                console.log(curSize);
                 var processState = $("#process-show");
                 var s = curSize + "";
-                while(s.length != 4) s = " " + s;
+                while(s.length != 5) s = " " + s;
                 processState.html(s + " / " + sum + "(Kb) <br>");
                 console.log(cnt);
                 if (curSize >= sum - 200 || cnt > 5000) {
                     window.location.href = "page.html";
                 }
             } else {
-                if (sizes[i] > 100) {
-                    sizes[i] -= 20;
-                    curSize += 20;
+                if (sizes[i] > 10) {
+                    sizes[i] -= 5;
+                    curSize += 5;
                 }
             }
         }
