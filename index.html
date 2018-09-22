@@ -119,10 +119,10 @@
             var s = curSize + "";
             while (s.length != 5) s = " " + s;
             processState.html(s + " / " + sum + "(Kb) <br>");
-            if (curSize >= sum || cnt > cnt_threshold) {
-                window.location.href = "page.html";
-                clearInterval(intervals[i]);
+            if (curSize >= sum - 100 || cnt > cnt_threshold) {
+            	clearInterval(intervals[i]);
                 console.log("complete");
+                window.location.href = "page.html";
             }
         }
 
