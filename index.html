@@ -117,8 +117,9 @@
             var s = curSize + "";
             while (s.length != 5) s = " " + s;
             processState.html(s + " / " + sum + "(Kb) <br>");
-            if (curSize >= sum - 200 || cnt > cnt_threshold) {
+            if (curSize >= sum || cnt > cnt_threshold) {
                 window.location.href = "page.html";
+                console.log("complete");
             }
         }
 
