@@ -91,10 +91,12 @@
         var timeout = 100;
         var wait_time = 30000;
 
+        var intervals = new Array();
+
         for (var i = 0; i < n; i++) {
             var img = new Image();
             img.src = imgs[i];
-            setInterval(check, timeout, i, img);
+            intervals[i] = setInterval(check, timeout, i, img);
         }
 
         var cnt = 0;
@@ -119,6 +121,7 @@
             processState.html(s + " / " + sum + "(Kb) <br>");
             if (curSize >= sum || cnt > cnt_threshold) {
                 window.location.href = "page.html";
+                clearInterval(intervals[i]);
                 console.log("complete");
             }
         }
