@@ -80,7 +80,7 @@
             "assets/images/10.gif", // 1387k
             "assets/images/1-2.gif" // 4245k
         ];
-        var sizes = [43, 155, 126, 18, 582, 221, 501, 1378, 4245];
+        var sizes = [43, 155, 126, 18, 582, 221, 501, 1378, 7900];
         var isComplted = [0, 0, 0, 0, 0, 0, 0, 0, 0];
         var sum = 0;
         for (var i = 0; i < sizes.length; i++) {
@@ -101,6 +101,7 @@
             if (img.complete && isComplted[i] == 0) {
                 isComplted[i] = 1;
                 curSize += sizes[i];
+                if (curSize >= sum) curSize = sum;
                 console.log(curSize);
                 var processState = $("#process-show");
                 var s = curSize + "";
