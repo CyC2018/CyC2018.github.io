@@ -80,48 +80,53 @@
             "assets/images/10.gif", // 1387k
             "assets/images/1-2.gif" // 4245k
         ];
+        var n = imgs.length;
         var sizes = [43, 155, 126, 18, 582, 221, 501, 1378, 7900];
         var isComplted = [0, 0, 0, 0, 0, 0, 0, 0, 0];
         var sum = 0;
-        for (var i = 0; i < sizes.length; i++) {
+        for (var i = 0; i < n; i++) {
             sum += sizes[i]
         }
         var curSize = 0;
-
-        for (var i = 0; i < imgs.length; i++) {
+        var timeout = 1000;
+        var wait_time = 60000;
+        var intervals = new Array();
+        for (var i = 0; i < n; i++) {
             var img = new Image();
             img.src = imgs[i];
-            setInterval(check, 100, i, img);
+            intervals[i] = setInterval(check, timeout, i, img);
         }
-
         var cnt = 0;
-
+        var cnt_threshold = wait_time * n / timeout;
+        console.log(cnt_threshold);
         function check(i, img) {
             cnt++;
+            // console.log(cnt);
             if (img.complete && isComplted[i] == 0) {
                 isComplted[i] = 1;
                 curSize += sizes[i];
-                if (curSize >= sum) curSize = sum;
-                console.log(curSize);
-                var processState = $("#process-show");
-                var s = curSize + "";
-                while(s.length != 4) s = " " + s;
-                processState.html(s + " / " + sum + "(Kb) <br>");
-                console.log(cnt);
-                if (curSize >= sum - 200 || cnt > 5000) {
-                    window.location.href = "page.html";
-                }
             } else {
                 if (sizes[i] > 100) {
                     sizes[i] -= 20;
                     curSize += 20;
                 }
             }
+            var processState = $("#process-show");
+            if (curSize >= sum) curSize = sum;
+            var s = curSize + "";
+            while (s.length != 5) s = " " + s;
+            processState.html(s + " / " + sum + "(Kb) <br>");
+            if (curSize >= sum - 10 || cnt >= cnt_threshold) {
+            	clearInterval(intervals[i]);
+                if (i == 0) {
+                	window.location.href = "page.html";
+                }
+            }
         }
 
         // 隐藏滚动条
         document.documentElement.style.overflowY = 'hidden';
-        
+
     })(jQuery);
     </script>
     <script src="assets/web/assets/jquery/jquery.min.js"></script>
