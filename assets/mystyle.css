@@ -46,3 +46,7 @@ img[src="assets/images/logomakr-0zpezn-563x600.png"] {
 .text-center {
   text-align: center;
 }
+
+p {
+      letter-spacing: 1.5px !important;
+}
