@@ -98,10 +98,8 @@
         }
         var cnt = 0;
         var cnt_threshold = wait_time * n / timeout;
-        console.log(cnt_threshold);
         function check(i, img) {
             cnt++;
-            // console.log(cnt);
             if (img.complete && isComplted[i] == 0) {
                 isComplted[i] = 1;
                 curSize += sizes[i];
