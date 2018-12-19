@@ -12,7 +12,7 @@ var bszCaller, bszTag;
         window[c] = this.evalCall(b), a = a.replace("=BusuanziCallback", "=" + c), scriptTag = document.createElement("SCRIPT"), scriptTag.type = "text/javascript", scriptTag.defer = !0, scriptTag.src = a, document.getElementsByTagName("HEAD")[0].appendChild(scriptTag)
     },
     evalCall: function(a) { return function(b) { ready(function() { try { a(b), scriptTag.parentElement.removeChild(scriptTag) } catch (c) { bszTag.hides() } }) } }
-}, bszCaller.fetch("http://busuanzi.ibruce.info/busuanzi?jsonpCallback=BusuanziCallback", function(a) { bszTag.texts(a), bszTag.shows() }), bszTag = {
+}, bszCaller.fetch("https://busuanzi.ibruce.info/busuanzi?jsonpCallback=BusuanziCallback", function(a) { bszTag.texts(a), bszTag.shows() }), bszTag = {
     bszs: ["site_pv", "page_pv", "site_uv"],
     texts: function(a) {
         this.bszs.map(function(b) {
