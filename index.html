@@ -45,99 +45,98 @@
         <div class="col-md-4 content" style="text-align: center;">
             <img src="assets/simple-pre-loader/images/loader-128x/Preloader_2.gif" >
             <p class="text-center" style="font-size: 28px;">Loading...</p>
-            <div id="busuanzi_container_site_pv">Site View : </div>
+            <p style="font-size: 10px; " id="busuanzi_container_site_pv-show">Site View :</p>
             <p style="font-size: 10px; " id="process-show"></p>
+            <div class="col-md-4"></div>
         </div>
-        <div class="col-md-4"></div>
-    </div>
-    <div class="preload">
-        <!-- <img src="assets/images/03.jpg"> -->
-        <!-- <img src="assets/images/1-2.gif"> -->
-        <!-- <img id="test" src="http://i4.bvimg.com/634539/d3d1d3391a12d9e3.gif"> -->
-        <!-- <img src="assets/images/10.gif"> -->
-        <!-- <img src="http://i4.bvimg.com/634539/b461705039bbac8e.gif"> -->
-        <!-- <img src="assets/images/8-1.gif"> -->
-        <!-- <img src="http://i4.bvimg.com/634539/241c3f357d316274.gif"> -->
-        <!-- <img src="assets/images/11.gif"> -->
-        <!-- <img src="http://i4.bvimg.com/634539/80c3277c3479d821.gif"> -->
-        <!-- <img src="assets/images/mbr-1920x1280.jpg"> -->
-        <!-- <img src="http://i4.bvimg.com/634539/587ec4194b6755f6.jpg"> -->
-        <!-- <img src="assets/images/1-1014x325.png"> -->
-        <!-- <img src="http://i4.bvimg.com/634539/824e7a3e73bb13a1.png"> -->
-        <!-- <img src="assets/images/1-348x112.png"> -->
-        <!-- <img src="http://i4.bvimg.com/634539/a038916dc1a14ce9.png"> -->
-        <!-- <img src="assets/images/1-3.gif"> -->
-        <!-- <img src="http://i4.bvimg.com/634539/f6aeecd00ee91ad1.gif"> -->
-    </div>
-    <script type="text/javascript">
-    (function($) {
-        var imgs = [
-            "assets/images/03.jpg", // 43k
-            "assets/images/mbr-1920x1280.jpg", // 155k
-            "assets/images/1-1014x325.png", // 126k
-            "assets/images/1-348x112.png", // 18k
-            "assets/images/8-1.gif", // 582k
-            "assets/images/11.gif", // 221k
-            "assets/images/1-3.gif", //501k
-            "assets/images/10.gif", // 1387k
-            "assets/images/1-2.gif" // 4245k
-        ];
-        var n = imgs.length;
-        var sizes = [43, 155, 126, 18, 582, 221, 501, 1378, 7900];
-        var isComplted = [0, 0, 0, 0, 0, 0, 0, 0, 0];
-        var sum = 0;
-        for (var i = 0; i < n; i++) {
-            sum += sizes[i]
-        }
-        var curSize = 0;
-        var timeout = 1000;
-        var wait_time = 90000;
-        var intervals = new Array();
-        for (var i = 0; i < n; i++) {
-            var img = new Image();
-            img.src = imgs[i];
-            intervals[i] = setInterval(check, timeout, i, img);
-        }
-        var cnt = 0;
-        var cnt_threshold = wait_time * n / timeout;
+        <div class="preload">
+            <!-- <img src="assets/images/03.jpg"> -->
+            <!-- <img src="assets/images/1-2.gif"> -->
+            <!-- <img id="test" src="http://i4.bvimg.com/634539/d3d1d3391a12d9e3.gif"> -->
+            <!-- <img src="assets/images/10.gif"> -->
+            <!-- <img src="http://i4.bvimg.com/634539/b461705039bbac8e.gif"> -->
+            <!-- <img src="assets/images/8-1.gif"> -->
+            <!-- <img src="http://i4.bvimg.com/634539/241c3f357d316274.gif"> -->
+            <!-- <img src="assets/images/11.gif"> -->
+            <!-- <img src="http://i4.bvimg.com/634539/80c3277c3479d821.gif"> -->
+            <!-- <img src="assets/images/mbr-1920x1280.jpg"> -->
+            <!-- <img src="http://i4.bvimg.com/634539/587ec4194b6755f6.jpg"> -->
+            <!-- <img src="assets/images/1-1014x325.png"> -->
+            <!-- <img src="http://i4.bvimg.com/634539/824e7a3e73bb13a1.png"> -->
+            <!-- <img src="assets/images/1-348x112.png"> -->
+            <!-- <img src="http://i4.bvimg.com/634539/a038916dc1a14ce9.png"> -->
+            <!-- <img src="assets/images/1-3.gif"> -->
+            <!-- <img src="http://i4.bvimg.com/634539/f6aeecd00ee91ad1.gif"> -->
+        </div>
+        <script type="text/javascript">
+        (function($) {
+            var imgs = [
+                "assets/images/03.jpg", // 43k
+                "assets/images/mbr-1920x1280.jpg", // 155k
+                "assets/images/1-1014x325.png", // 126k
+                "assets/images/1-348x112.png", // 18k
+                "assets/images/8-1.gif", // 582k
+                "assets/images/11.gif", // 221k
+                "assets/images/1-3.gif", //501k
+                "assets/images/10.gif", // 1387k
+                "assets/images/1-2.gif" // 4245k
+            ];
+            var n = imgs.length;
+            var sizes = [43, 155, 126, 18, 582, 221, 501, 1378, 7900];
+            var isComplted = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+            var sum = 0;
+            for (var i = 0; i < n; i++) {
+                sum += sizes[i]
+            }
+            var curSize = 0;
+            var timeout = 1000;
+            var wait_time = 90000;
+            var intervals = new Array();
+            for (var i = 0; i < n; i++) {
+                var img = new Image();
+                img.src = imgs[i];
+                intervals[i] = setInterval(check, timeout, i, img);
+            }
+            var cnt = 0;
+            var cnt_threshold = wait_time * n / timeout;
 
-        function check(i, img) {
-            cnt++;
-            if (img.complete && isComplted[i] == 0) {
-                isComplted[i] = 1;
-                curSize += sizes[i];
-            } else {
-                if (sizes[i] > 100) {
-                    sizes[i] -= 20;
-                    curSize += 20;
+            function check(i, img) {
+                cnt++;
+                if (img.complete && isComplted[i] == 0) {
+                    isComplted[i] = 1;
+                    curSize += sizes[i];
+                } else {
+                    if (sizes[i] > 100) {
+                        sizes[i] -= 20;
+                        curSize += 20;
+                    }
+                }
+                var processState = $("#process-show");
+                if (curSize >= sum) curSize = sum;
+                var s = curSize + "";
+                while (s.length != 5) s = " " + s;
+                processState.html(s + " / " + sum + "(Kb) <br>");
+                if (curSize >= sum - 10 || cnt >= cnt_threshold) {
+                    clearInterval(intervals[i]);
+                    if (i == 0) {
+                        window.location.href = "page.html";
+                    }
                 }
             }
-            var processState = $("#process-show");
-            if (curSize >= sum) curSize = sum;
-            var s = curSize + "";
-            while (s.length != 5) s = " " + s;
-            processState.html(s + " / " + sum + "(Kb) <br>");
-            if (curSize >= sum - 10 || cnt >= cnt_threshold) {
-                clearInterval(intervals[i]);
-                if (i == 0) {
-                    window.location.href = "page.html";
-                }
-            }
-        }
 
-        // 隐藏滚动条
-        document.documentElement.style.overflowY = 'hidden';
+            // 隐藏滚动条
+            document.documentElement.style.overflowY = 'hidden';
 
-    })(jQuery);
-    </script>
-    <script src="assets/web/assets/jquery/jquery.min.js"></script>
-    <script src="assets/popper/popper.min.js"></script>
-    <script src="assets/tether/tether.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/smoothscroll/smooth-scroll.js"></script>
-    <script src="assets/parallax/jarallax.min.js"></script>
-    <script src="assets/theme/js/script.js"></script>
-    <script src="assets/as-pie-progress/jquery-as-pie-progress.min.js"></script>
+        })(jQuery);
+        </script>
+        <script src="assets/web/assets/jquery/jquery.min.js"></script>
+        <script src="assets/popper/popper.min.js"></script>
+        <script src="assets/tether/tether.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/smoothscroll/smooth-scroll.js"></script>
+        <script src="assets/parallax/jarallax.min.js"></script>
+        <script src="assets/theme/js/script.js"></script>
+        <script src="assets/as-pie-progress/jquery-as-pie-progress.min.js"></script>
 </body>
 
 </html>
